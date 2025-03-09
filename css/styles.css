@@ -57,7 +57,161 @@ h1 {
     text-decoration: none;
 }
 
+/* Mobile styles */
 @media (max-width: 768px) {
+    /* Header */
+    .container-nav-menu {
+      width: 90%;
+      padding: 10px 0;
+    }
+  
+    .menu-sections {
+      margin-left: 5%;
+      width: 90%;
+    }
+  
+    h1 {
+      font-size: 24px;
+      text-align: center;
+      margin: 20px 0;
+    }
+  
+    .nav-menu-sections {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu ul {
+        display: none;
+    }
+  
+    .nav-menu-sections a {
+      font-size: 10px;
+      padding: 6px 12px;
+    }
+  
+    /* Search form */
+    .container-search-menu {
+      flex-direction: column;
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .city-from,
+    .city-to-block,
+    .date-fromDate,
+    .date-toDate,
+    .passengers-and-class-block {
+      width: 100% !important;
+      margin: 5px 0;
+    }
+  
+    .create-line,
+    .create-line-center,
+    .create-line-container-search-menu {
+      display: none;
+    }
+  
+    .container-search-btn {
+      width: 100%;
+      justify-content: center;
+      margin: 10px 0;
+    }
+  
+    .complex-route {
+      text-align: center;
+      margin-top: 15px;
+    }
+  
+    /* Main content */
+    .container-proposals,
+    .container-information {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "line-1-1"
+        "line-1-2"
+        "line-2-1"
+        "line-2-2"
+        "line-3-1"
+        "line-3-2"
+        "line-4-2";
+    }
+  
+    .popular-destinations-block,
+    .top-airlines-block {
+      flex-direction: column;
+    }
+  
+    .popular-destinations-element-block {
+      width: 100%;
+      padding: 8px 0;
+    }
+  
+    .top-airlines-element-block {
+      flex-wrap: wrap;
+    }
+  
+    /* Footer */
+    .country-categories {
+      flex-direction: column;
+    }
+  
+    .container-footer-icons img {
+      height: auto;
+      max-width: 30%;
+    }
+  
+    .lower-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .apps {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .messengers {
+      width: 100%;
+      text-align: center;
+    }
+  
+    /* Hide elements */
+    .laptop,
+    .stub {
+      display: none;
+    }
+  
+    /* Adjust text sizes */
+    .management-section,
+    .bus-tickets,
+    .hot-sales,
+    .best-offers {
+      padding: 15px;
+    }
+  
+    h3 {
+      font-size: 16px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  }
+  
+  /* Small screens */
+  @media (max-width: 480px) {
+    .container-header {
+      padding-bottom: 30px;
+    }
+
     .nav-menu ul {
         display: none;
     }
@@ -65,11 +219,26 @@ h1 {
     .hamburger {
         display: block;
     }
-
-    header {
-        width: 100%;
+  
+    .nav-menu-sections a {
+      font-size: 9px;
+      padding: 4px 8px;
     }
-}
+  
+    .container-search-btn {
+      padding: 15px 20px;
+    }
+  
+    .best-offers {
+      height: auto;
+      padding: 15px;
+    }
+  
+    .best-offers input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
 
 .lang {
     margin-left: 30px;
