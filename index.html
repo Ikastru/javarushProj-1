@@ -40,8 +40,8 @@
                 <a href="#" class="discount-hotel">Отели <span>скидка 60% на отели</span></a>
                 <a href="#">Страхование</a>
             </nav>
-            <!-- Блок поиска -->
-            <div>
+             <!-- Блок поиска -->
+             <div>
                 <form class="container-search">
                     <fieldset class="container-search-menu">
                         <div class="city-from">
@@ -63,88 +63,129 @@
                                     <input class="date-fromDate" type="text" name="text" placeholder="Туда" />
                                 </label>
                             </div>
+                            <!-- Календарь -->
+                            <dialog class="calendar-container">
+                                <div class="calendar">
+                                    <div class="calendar-header">
+                                        <div class="calendar-label">Выберите дату туда</div>
+                                        <div class="calendar-date-controls">
+                                            <button class="calendar-date-control">В одну сторону</button>
+                                        </div>
+                                    </div>
+                                    <div class="calendar-controls">
+                                        <button class="calendar-month-control calendar-month-control-rev">Назад</button>
+                                        <button
+                                            class="calendar-month-control calendar-month-control-fwd">Вперед</button>
+                                    </div>
+                                    <div class="calendar-dates">
+
+                                    </div>
+                                    <div class="calendar-note">
+                                        Для отображения цен необходимо выбрать маршрут
+                                    </div>
+                                </div>
+                            </dialog>
+
+                            <template id="calendar-template">
+                                <div class="calendar-month">
+                                    <div class="calendar-month-name">Сентябрь 2024</div>
+                                    <div class="calendar-month-dates">
+                                        <ul class="calendar-month-date-names">
+                                            <li>пн</li>
+                                            <li>вт</li>
+                                            <li>ср</li>
+                                            <li>чт</li>
+                                            <li>пт</li>
+                                            <li>сб</li>
+                                            <li>вс</li>
+                                        </ul>
+                                        <ul class="calendar-month-dates-days">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </template>
+                            <!-- Календарь -->
                             <div class="create-line-container-search-menu"></div>
                             <div class="date-toDate">
                                 <label for="date-toDate">
                                     <input class="date-toDate" type="text" name="text" placeholder="Обратно" />
                                 </label>
                             </div>
+            </div>
+            <div class="create-line"></div>
+            <div class="passengers-and-class-block">
+                <label for="passengers-and-class">
+                    <span class="passengers-span">Пассажиры&#44; класс</span>
+                    <input class="passengers-and-class" type="text" name="text" value="1 пассажир&#44; любой" />
+                </label>
+                <!-- Окно выбора количества пассажиров -->
+                <div class="passengers-dropdown" id="passengersDropdown">
+                    <div class="dropdown-header">Максимум 9 пассажиров</div>
+
+                    <div class="passenger-type">
+                        <div class="type-info">
+                            <span>Взрослые</span>
+                            <span class="age-info">старше 12 лет</span>
                         </div>
-                        <div class="create-line"></div>
-                        <div class="passengers-and-class-block">
-                            <label for="passengers-and-class">
-                                <span class="passengers-span">Пассажиры&#44; класс</span>
-                                <input class="passengers-and-class" type="text" name="text"
-                                    value="1 пассажир&#44; любой" />
-                            </label>
-                            <!-- Окно выбора количества пассажиров -->
-                            <div class="passengers-dropdown" id="passengersDropdown">
-                                <div class="dropdown-header">Максимум 9 пассажиров</div>
-
-                                <div class="passenger-type">
-                                    <div class="type-info">
-                                        <span>Взрослые</span>
-                                        <span class="age-info">старше 12 лет</span>
-                                    </div>
-                                    <div class="counter">
-                                        <button class="counter-btn minus">-</button>
-                                        <span class="count">1</span>
-                                        <button class="counter-btn plus">+</button>
-                                    </div>
-                                </div>
-
-                                <div class="passenger-type">
-                                    <div class="type-info">
-                                        <span>Дети</span>
-                                        <span class="age-info">2–12 лет</span>
-                                    </div>
-                                    <div class="counter">
-                                        <button class="counter-btn minus">-</button>
-                                        <span class="count">0</span>
-                                        <button class="counter-btn plus">+</button>
-                                    </div>
-                                </div>
-
-                                <div class="passenger-type">
-                                    <div class="type-info">
-                                        <span>Младенцы</span>
-                                        <span class="age-info">до 2 лет</span>
-                                    </div>
-                                    <div class="counter">
-                                        <button class="counter-btn minus">-</button>
-                                        <span class="count">0</span>
-                                        <button class="counter-btn plus">+</button>
-                                    </div>
-                                </div>
-
-                                <div class="class-select">
-                                    <div class="class-option active">Любой</div>
-                                    <div class="class-option">Бизнес</div>
-                                    <div class="class-option">Эконом</div>
-                                </div>
-
-                                <button class="confirm-btn">OK</button>
-                            </div>
+                        <div class="counter">
+                            <button class="counter-btn minus">-</button>
+                            <span class="count">1</span>
+                            <button class="counter-btn plus">+</button>
                         </div>
-                    </fieldset>
-                    <button class="container-search-btn"><span>Найти</span></button>
-                </form>
-                <div class="complex-route">
-                    <ul class="route">
-                        <li>
-                            <svg width="20px" height="20px" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="1" y="1" width="1" height="1" fill="white" />
-                                <rect x="6" y="1" width="1" height="1" fill="white" />
-                                <rect x="3.5" y="6" width="1" height="1" fill="white" />
-                                <path d="M1.5 2 L3.5 6" stroke="white" stroke-width="0.1" />
-                                <path d="M6.5 2 L3.5 6" stroke="white" stroke-width="0.1" />
-                            </svg>
-                        </li>
-                        <li>
-                            Сложный маршрут
-                        </li>
-                    </ul>
+                    </div>
+
+                    <div class="passenger-type">
+                        <div class="type-info">
+                            <span>Дети</span>
+                            <span class="age-info">2–12 лет</span>
+                        </div>
+                        <div class="counter">
+                            <button class="counter-btn minus">-</button>
+                            <span class="count">0</span>
+                            <button class="counter-btn plus">+</button>
+                        </div>
+                    </div>
+
+                    <div class="passenger-type">
+                        <div class="type-info">
+                            <span>Младенцы</span>
+                            <span class="age-info">до 2 лет</span>
+                        </div>
+                        <div class="counter">
+                            <button class="counter-btn minus">-</button>
+                            <span class="count">0</span>
+                            <button class="counter-btn plus">+</button>
+                        </div>
+                    </div>
+
+                    <div class="class-select">
+                        <div class="class-option active">Любой</div>
+                        <div class="class-option">Бизнес</div>
+                        <div class="class-option">Эконом</div>
+                    </div>
+
+                    <button class="confirm-btn">OK</button>
                 </div>
+            </div>
+            </fieldset>
+            <button class="container-search-btn"><span>Найти</span></button>
+            </form>
+            <div class="complex-route">
+                <ul class="route">
+                    <li>
+                        <svg width="20px" height="20px" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="1" height="1" fill="white" />
+                            <rect x="6" y="1" width="1" height="1" fill="white" />
+                            <rect x="3.5" y="6" width="1" height="1" fill="white" />
+                            <path d="M1.5 2 L3.5 6" stroke="white" stroke-width="0.1" />
+                            <path d="M6.5 2 L3.5 6" stroke="white" stroke-width="0.1" />
+                        </svg>
+                    </li>
+                    <li>
+                        Сложный маршрут
+                    </li>
+                </ul>
+            </div>
             </div>
         </section>
     </header>
