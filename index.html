@@ -47,8 +47,7 @@
                         <div class="city-from">
                             <label for="city-from">
                                 <span class="from-which">Откуда</span>
-                                <input class="city-from" type="text" name="text"
-                                    value="Варшава" />
+                                <input class="city-from" type="text" name="text" value="Варшава" />
                             </label>
                         </div>
                         <div class="create-line"></div>
@@ -78,6 +77,54 @@
                                 <input class="passengers-and-class" type="text" name="text"
                                     value="1 пассажир&#44; любой" />
                             </label>
+                            <!-- Окно выбора количества пассажиров -->
+                            <div class="passengers-dropdown" id="passengersDropdown">
+                                <div class="dropdown-header">Максимум 9 пассажиров</div>
+
+                                <div class="passenger-type">
+                                    <div class="type-info">
+                                        <span>Взрослые</span>
+                                        <span class="age-info">старше 12 лет</span>
+                                    </div>
+                                    <div class="counter">
+                                        <button class="counter-btn minus">-</button>
+                                        <span class="count">1</span>
+                                        <button class="counter-btn plus">+</button>
+                                    </div>
+                                </div>
+
+                                <div class="passenger-type">
+                                    <div class="type-info">
+                                        <span>Дети</span>
+                                        <span class="age-info">2–12 лет</span>
+                                    </div>
+                                    <div class="counter">
+                                        <button class="counter-btn minus">-</button>
+                                        <span class="count">0</span>
+                                        <button class="counter-btn plus">+</button>
+                                    </div>
+                                </div>
+
+                                <div class="passenger-type">
+                                    <div class="type-info">
+                                        <span>Младенцы</span>
+                                        <span class="age-info">до 2 лет</span>
+                                    </div>
+                                    <div class="counter">
+                                        <button class="counter-btn minus">-</button>
+                                        <span class="count">0</span>
+                                        <button class="counter-btn plus">+</button>
+                                    </div>
+                                </div>
+
+                                <div class="class-select">
+                                    <div class="class-option active">Любой</div>
+                                    <div class="class-option">Бизнес</div>
+                                    <div class="class-option">Эконом</div>
+                                </div>
+
+                                <button class="confirm-btn">OK</button>
+                            </div>
                         </div>
                     </fieldset>
                     <button class="container-search-btn"><span>Найти</span></button>
@@ -311,8 +358,7 @@
                 <div>
                     <div class="best-trips-offers">
                         <p>Лучшие предложения для путешествий</p>
-                        <img src="img/subscribe-laptop.svg" class="laptop" 
-                        alt="icon subscribe laptop">
+                        <img src="img/subscribe-laptop.svg" class="laptop" alt="icon subscribe laptop">
                     </div>
                     <form>
                         <label>
@@ -414,7 +460,7 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 
 </html>
